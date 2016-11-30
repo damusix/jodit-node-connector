@@ -16,3 +16,4 @@ Happily written in Hapi.
 - Implement testing suite
 - Branding
 - Add image cropper
+- Max filesize upload
