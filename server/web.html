@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jodit NodeJS Connector by Danilo Alonso</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jodit/2.5.53/jodit.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jodit/2.5.53/jodit.min.js"></script>
+</head>
+<body>
+
+<div id="editor"></div>
+
+
+<script>
+    var editor = new Jodit('#editor', {
+        buttons: ['image'],
+        filebrowser: {
+            ajax: {
+                url: '/api/files',
+                process: function (resp) {
+                    return resp;
+                }
+            },
+            uploader: {
+                url: '/api/uploads'
+            },
+
+        }
+    });
+</script>
+
+</body>
+</html>
